@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Moodboard — a simple daily mood check-in." />
+    <title>Moodboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="app-header">
+        <p class="eyebrow">A small moment for you</p>
+        <h1>Moodboard</h1>
+        <div class="date-time" aria-label="Current date and time">
+          <span id="date"></span>
+          <span aria-hidden="true">•</span>
+          <span id="day"></span>
+          <span aria-hidden="true">•</span>
+          <time id="time"></time>
+        </div>
+      </header>
+
+      <section class="mood-section" aria-labelledby="mood-question">
+        <h2 id="mood-question">How are you feeling today?</h2>
+        <p class="hint">Choose the one that feels closest right now.</p>
+        <div class="mood-grid" id="mood-options" aria-label="Mood options">
+          <button class="mood-card" type="button" data-mood="Happy" data-emoji="😊" aria-pressed="false"><span class="emoji">😊</span><span>Happy</span></button>
+          <button class="mood-card" type="button" data-mood="Sad" data-emoji="😢" aria-pressed="false"><span class="emoji">😢</span><span>Sad</span></button>
+          <button class="mood-card" type="button" data-mood="Angry" data-emoji="😡" aria-pressed="false"><span class="emoji">😡</span><span>Angry</span></button>
+          <button class="mood-card" type="button" data-mood="Dull" data-emoji="😐" aria-pressed="false"><span class="emoji">😐</span><span>Dull</span></button>
+          <button class="mood-card" type="button" data-mood="Bored" data-emoji="😑" aria-pressed="false"><span class="emoji">😑</span><span>Bored</span></button>
+          <button class="mood-card" type="button" data-mood="Confused" data-emoji="😕" aria-pressed="false"><span class="emoji">😕</span><span>Confused</span></button>
+        </div>
+        <p id="confirmation" class="confirmation" role="status" aria-live="polite">Select a mood to check in.</p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
