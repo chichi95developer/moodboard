@@ -34,6 +34,22 @@
         </div>
         <p id="confirmation" class="confirmation" role="status" aria-live="polite">Select a mood to check in.</p>
       </section>
+
+      <section class="dashboard" aria-labelledby="dashboard-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your dashboard</p>
+            <h2 id="dashboard-title">The last 30 days</h2>
+          </div>
+          <p id="history-summary" class="history-summary"></p>
+        </div>
+        <div class="chart-card">
+          <div class="chart-labels" aria-hidden="true"><span>Happy</span><span>Sad</span></div>
+          <svg id="mood-chart" class="mood-chart" viewBox="0 0 600 190" role="img" aria-label="Your mood trend over the last 30 days"></svg>
+          <div class="chart-axis" aria-hidden="true"><span>30 days ago</span><span>Today</span></div>
+        </div>
+        <div id="history-list" class="history-list" aria-label="Mood history for the last 30 days"></div>
+      </section>
     </main>
     <script src="app.js"></script>
   </body>
